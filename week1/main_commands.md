@@ -73,3 +73,28 @@ infile = open(filename, "r")
 print(infile.read()[:10])
 infile.close()
 
+
+**********************************************************
+Using **with** for Files
+
+    with open("mydata.txt", "r") as md: # = md = open("mydata.txt", "r")
+        for line in md:
+        print(line) ###c om o with não precisa usar o .close()
+
+
+Recipe for Reading and Processing a File
+#1. Open the file using with and open.
+
+#2. Use .readlines() to get a list of the lines of text in the file.
+
+#3. Use a for loop to iterate through the strings in the list, each being one line from the file. On each iteration, process that line of text
+
+#4. When you are done extracting data from the file, continue writing your code outside of the indentation. Using with will automatically close the file once the program exits the with block.
+
+fname = "yourfile.txt"
+with open(fname, "r") as fileref:
+    lines = fileref.readLines()
+    for lin in lines:
+    ### so on..
+
+    
