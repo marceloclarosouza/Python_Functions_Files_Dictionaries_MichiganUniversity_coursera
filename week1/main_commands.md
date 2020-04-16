@@ -1,6 +1,8 @@
 open(filename,'r) : open a read file
 open(filename,'w'): open writting file
 
+open("../myData/data2.txt", "r")
+
 filevariable.close() : file use is complete
 filevar.write("astring") : Add a string to the end of the file
 filevar.read(): Read and return a string of n characters, or the entire file as a single string if n is not provided.
@@ -55,4 +57,19 @@ for lim in data.readlines():
     num_lines += 1
 
 print(num_lines)
+
+Examples of reading and writting files:
+
+fule = "squared_numbers.txt"
+outfile = open(filenames, "w")
+
+for number in range(1,13):
+    square = number * number
+    outfile.write(str(square)+ "\n")
+
+outfile.close()
+
+infile = open(filename, "r")
+print(infile.read()[:10])
+infile.close()
 
