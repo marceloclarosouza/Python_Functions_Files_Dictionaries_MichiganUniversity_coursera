@@ -4,7 +4,7 @@ ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
 list_temp = []
 
 def second_let (x):
-    return x[1]
+    return x[1]#select the letter word of each word
 
-sorted_by_second_let= sorted(ex_lst, key = second_let)
+sorted_by_second_let= sorted(ex_lst, key = second_let)#order the words based on the lescond letter using "key" 
 print(sorted_by_second_let)
