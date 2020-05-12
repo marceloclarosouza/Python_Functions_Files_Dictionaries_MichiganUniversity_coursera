@@ -4,11 +4,7 @@ ex_lst = ['hi', 'how are you', 'bye', 'apple', 'zebra', 'dance']
 list_temp = []
 
 def second_let (x):
-    #for char in ex_lst:
-        #list_temp.append(char[1])       
-    sorted_char = sorted(ex_lst[1])
-    return sorted_char
-    
+    return x[1]
 
-sorted_by_second_let = (second_let(ex_lst))
+sorted_by_second_let= sorted(ex_lst, key = second_let)
 print(sorted_by_second_let)
