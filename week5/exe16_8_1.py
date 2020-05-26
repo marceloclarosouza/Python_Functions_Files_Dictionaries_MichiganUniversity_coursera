@@ -16,7 +16,6 @@ print(lista)
 """
 Now suppose the list wasn’t sorted yet. How would get those same five elements from this list?
 """
-
 L = [0, 1, 6, 7, 3, 6, 8, 4, 4]
 lista = []##creating new list
 L.sort(reverse = True)##sort the list
@@ -24,5 +23,15 @@ L.sort(reverse = True)##sort the list
 for number in range(5):
     if number < 5:
         lista.append(L[number])
-           
 print(lista)
+
+"""
+Now take a list L and make a dictionary of counts for how often these numbers appear in the list.
+"""
+L = [0, 1, 6, 7, 3, 6, 8, 4, 4, 6, 1, 6, 6, 5, 4, 4, 3, 35, 4, 11]
+dic = {}#creating a dictionary
+for number in L:#counting the retetions
+    if number not in dic:
+        dic[number] = 0
+    dic[number] +=1
+print(dic)
