@@ -39,6 +39,39 @@ print(dic)
 """
 Now sort the keys (numbers) based on their frequencies
 """
-dic_s = sorted(dic.keys())#sorting the dictionary
+dic_s = sorted(dic.keys(), key = lambda k: dic[k], reverse = True)#sorting the dictionary
 for x in dic_s:
     print("{} appears {} times".format(x, dic[x]))
+    
+"""
+Finally, generalize what you’ve done.
+Write a function that takes a string instead of a list as a parameter 
+and returns a list of the five most frequent characters in the string.
+"""
+S = "finallygeneralizewhatyouhavedone"
+
+def ordenar_string(S):
+    letter = {}
+    list1 = []
+
+    for L in S:
+        if L not in letter:
+            letter[L] = 0
+        letter[L] += 1
+    #print(letter)
+
+    lista = sorted(letter.keys(), key = lambda k: letter[k], reverse = True)
+    i = 0
+    for x in lista:
+        if i < 5:
+            list1.append(x)
+        i+=1
+    #print("{} appears {} times".format(x, letter[x]))
+    return list1
+
+result = ordenar_string(S)
+print(result)
+
+
+
+
