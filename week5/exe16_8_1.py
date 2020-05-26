@@ -5,10 +5,24 @@ Step 1. Suppose you had this list, [8, 7, 6, 6, 4, 4, 3, 1, 0], already sorted, 
 """
 
 L = [8, 7, 6, 6, 4, 4, 3, 1, 0]
-list = []
+lista = []
 
 for number in range(len(L)):
     if (number < 5):
-        list.append(L[number])
+        lista.append(L[number])
         
-print(list)
+print(lista)
+
+"""
+Now suppose the list wasn’t sorted yet. How would get those same five elements from this list?
+"""
+
+L = [0, 1, 6, 7, 3, 6, 8, 4, 4]
+lista = []##creating new list
+L.sort(reverse = True)##sort the list
+
+for number in range(5):
+    if number < 5:
+        lista.append(L[number])
+           
+print(lista)
