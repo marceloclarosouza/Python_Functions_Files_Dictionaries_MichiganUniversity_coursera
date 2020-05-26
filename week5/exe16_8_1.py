@@ -35,3 +35,10 @@ for number in L:#counting the retetions
         dic[number] = 0
     dic[number] +=1
 print(dic)
+
+"""
+Now sort the keys (numbers) based on their frequencies
+"""
+dic_s = sorted(dic.keys())#sorting the dictionary
+for x in dic_s:
+    print("{} appears {} times".format(x, dic[x]))
